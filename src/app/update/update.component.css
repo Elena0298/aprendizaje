@@ -1,0 +1,16 @@
+.table{
+    width: 50%;
+}
+
+.div1{
+    display: flex;
+    justify-content: center;
+}
+
+.favorito{
+    width: 100%;
+}
+
+.filas-secundarias{
+    width: 80%;
+}

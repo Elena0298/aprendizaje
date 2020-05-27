@@ -1,0 +1,28 @@
+.div1{
+    display: flex;
+    justify-content: center;
+}
+
+.table{
+    width: 50%;
+}
+
+.favorito{
+    width: 100%;
+}
+
+.fila-principal{
+    width: 80%;
+}
+
+.filas-secundarias{
+    text-align: justify;
+}
+
+.fila-principal1{
+    width: 20%;
+}
+
+.table2{
+    width: 80%;
+}

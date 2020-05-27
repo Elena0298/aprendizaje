@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <base href="/">
+    </head>
+    <body>
+        <h1 style='text-align:center'>Actualizar to do</h1>
+        <div class="div1">
+            <table class="table" style="color: white;">
+                <tbody style="background: rgb(251, 252, 253); border: 1px solid rgba(126, 15, 190, 0.3);">   
+                <tr>          
+                    <td class="fila-principal1">
+                        <input [(ngModel)]="title" type="text" size="20" maxlength="60" name="title" placeholder="Escribe el to do...">
+                    </td>
+                    <td class="fila-principal">
+                        <input [(ngModel)]="description" type="text" size="80" maxlength="400" name="description" placeholder="Escribe la descripción del to do..." >
+                    </td>
+                    <td>
+                        <button class="favorito" type="button" (click)="update()">Update</button>
+                    </td>        
+                </tr> 
+            </table>
+        </div>
+
+    </body>
+</html>

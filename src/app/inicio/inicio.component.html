@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <base href="/">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    </head>
+    <body>
+        <h1 style='text-align:center'>Registra tus pendientes</h1>
+        <div class="div1">
+            <table class="table" style="color:white" >
+                <colgroup span="3" style="background: rgb(25, 1, 92); border: 1px solid rgba(80, 6, 218, 0.3);"></colgroup>            
+                <tr> 
+                    <th>ToDo</th>
+                    <th class="fila-principal">Description</th>
+                    <th><button class="favorito" type="button" (click)="addToDo()">Add</button></th>                   
+                </tr>                
+                <tbody style="background: rgb(24, 0, 161); border: 1px solid rgba(126, 15, 190, 0.3);">           
+                <tr *ngFor="let todo of todos.toDos">          
+                    <td>{{todo.title}}</td>
+                    <td class="filas-secundarias">
+                        {{todo.description}}
+                    </td>
+                    <td>
+                        <button class="favorito" type="button" routerLink="/update/{{todo.idToDo}}">Update</button>
+                        <button class="favorito" type="button" (click)="delete(todo.idToDo)">Delete</button>
+                    </td>        
+                </tr>        
+            </table>
+        </div>
+
+
+
+        <div id="id01" class="w3-modal">
+            <div class="w3-modal-content">
+                <div class="w3-container">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                    <div class="div1">
+                        <table class="table2" style="color: white;">
+                            <tbody style="background: white(75, 86, 240); border: 1px solid rgba(126, 15, 190, 0.3);">   
+                            <tr class="tr1">          
+                                <td class="fila-principal1"><input [(ngModel)]="title" type="text" size="15" maxlength="60" name="ToDo" placeholder="Escribe el to do..."></td>
+                                <td class="fila-principal"><input [(ngModel)]="description" type="text" size="60" maxlength="400" name="comentarios" placeholder="Escribe la descripción del to do..."></td>
+
+                                <td>
+                                    <button class="favorito" type="button" (click)="register()">Add</button>
+                                </td>        
+                            </tr> 
+                        </table>
+                    </div>    
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
+
